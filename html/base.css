@@ -23,6 +23,12 @@ p {
 
 
 @media print {
+    header {
+        page-break-after: always;
+    }
+    header .title {
+        margin: 200px 0 500px 0;
+    }
     section {
         page-break-after: always;
     }

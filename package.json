@@ -1,0 +1,15 @@
+{
+  "name": "classic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cover.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anantha Kumaran <ananthakumaran@gmail.com>",
+  "dependencies": {
+    "jsdom": "7.0.2",
+    "svg2png": "^3.0.0",
+    "trianglify": "0.4.0"
+  }
+}

@@ -3,3 +3,7 @@ books/*/*.pdf
 books/*/*.epub
 books/*/*.html
 books/*/*.mobi
+books/*/*.png
+books/*/*.svg
+node_modules/
+

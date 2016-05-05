@@ -3,7 +3,11 @@ title: கள்வனின் காதலி
 lang: ta
 author:
   - கல்கி
+cover-image: cover.png
 
+authors: கல்கி
+titleFontSize: 200
+authorsFontSize: 175
 filename: kalvanin_kadhali
 source: source.md
 sourceFormat: markdown+yaml_metadata_block
