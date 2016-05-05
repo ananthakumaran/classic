@@ -22,7 +22,7 @@ def font(metadata)
 end
 
 def general_options(metadata)
-  "metadata.yaml"
+  "metadata.yaml --verbose"
 end
 
 def generateEPUB(metadata)
@@ -30,11 +30,15 @@ def generateEPUB(metadata)
 end
 
 def generateHTML(metadata)
-  `pandoc #{general_options(metadata)} --css=#{full_path("../../html/base.css")} --css=#{html_css(metadata)} --from #{metadata['sourceFormat']} --to html #{metadata['source']} --self-contained --output #{metadata['filename']}.html`
+  `pandoc #{general_options(metadata)} --css=#{full_path("../../html/base.css")} --css=#{html_css(metadata)} --from #{metadata['sourceFormat']} --to html5 --section-divs #{metadata['source']} --self-contained --output #{metadata['filename']}.html`
 end
 
 def generatePDF(metadata)
-  `pandoc #{general_options(metadata)} --css=#{full_path("../../html/base.css")} --css=#{html_css(metadata)} --from #{metadata['sourceFormat']} --to pdf #{metadata['source']}  -t html --output #{metadata['filename']}.pdf`
+  `electron-pdf #{metadata['filename']}.html #{metadata['filename']}.pdf`
+end
+
+def generateMOBI(metadata)
+  `kindlegen #{metadata['filename']}.epub -verbose -c1 -o #{metadata['filename']}.mobi`
 end
 
 def generate(dir)
@@ -44,6 +48,7 @@ def generate(dir)
   generateEPUB(metadata)
   generateHTML(metadata)
   generatePDF(metadata)
+  generateMOBI(metadata)
 end
 
 

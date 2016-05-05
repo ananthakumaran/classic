@@ -4,19 +4,26 @@ body {
     color: #323232;
 }
 
-#header {
+header {
     margin-bottom: 40px;
 }
 
-#header .title {
+header .title {
     text-align: center;
     font-size: 2.5em;
 }
 
-#header .author {
+header .author {
     text-align: center;
 }
 
 p {
     text-align: justify;
+}
+
+
+@media print {
+    section {
+        page-break-after: always;
+    }
 }
