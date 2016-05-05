@@ -1,0 +1,15 @@
+---
+title: कफ़न
+lang: hi
+author:
+  - मुंशी प्रेमचंद
+
+cover-image: cover.png
+
+authors: मुंशी प्रेमचंद
+titleFontSize: 500
+authorsFontSize: 175
+filename: kafan
+source: source.md
+sourceFormat: markdown+yaml_metadata_block+hard_line_breaks
+---

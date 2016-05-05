@@ -15,7 +15,7 @@ function random(start, end) {
 var width = 1563;
 var height = 2500;
 
-var pattern = trianglify({width: width, height: height, seed: title, variance: random(0.5, 1), cell_size: random(250, 300)});
+var pattern = trianglify({width: width, height: height, seed: title, variance: random(0.5, 1), cell_size: random(260, 300)});
 
 var svg = pattern.svg();
 svg.setAttribute('xmlns','http://www.w3.org/2000/svg');
