@@ -1,0 +1,4 @@
+.DS_Store
+books/*/*.pdf
+books/*/*.epub
+books/*/*.html

@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Lohit Tamil';
+  font-style: normal;
+  font-weight: 400;
+  src: url('Lohit-Tamil.ttf');
+}
+body { font-family: 'Lohit Tamil'; }
