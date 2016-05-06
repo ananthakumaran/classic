@@ -4,4 +4,7 @@
   font-weight: 400;
   src: url('Lohit-Tamil.ttf');
 }
-body { font-family: 'Lohit Tamil'; }
+body {
+    text-rendering: optimizeLegibility;
+    font-family: 'Lohit Tamil';
+}

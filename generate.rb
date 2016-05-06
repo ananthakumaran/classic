@@ -16,7 +16,7 @@ def html_css(metadata)
 end
 
 def font(metadata)
-  fonts = {ta: 'Lohit-Tamil.ttf', hi: 'Lohit-Devanagari.ttf'}
+  fonts = {ta: 'Lohit-Tamil.otf', hi: 'Lohit-Devanagari.otf'}
   lang = metadata['lang']
   full_path(File.join('../../fonts', fonts[lang.to_sym]))
 end

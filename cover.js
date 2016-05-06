@@ -22,7 +22,7 @@ svg.setAttribute('xmlns','http://www.w3.org/2000/svg');
 var doc = svg.ownerDocument;
 
 var text = doc.createElementNS("http://www.w3.org/2000/svg", 'text');
-text.setAttribute("fill", 'white');
+text.setAttribute("fill", '#333');
 text.textContent = title;
 text.setAttribute("font-size", titleFontSize);
 text.setAttribute("x", width / 2);
@@ -31,7 +31,7 @@ text.style.textAnchor = 'middle';
 svg.appendChild(text);
 
 text = doc.createElementNS("http://www.w3.org/2000/svg", 'text');
-text.setAttribute("fill", 'white');
+text.setAttribute("fill", '#333');
 text.setAttribute("stroke", 'none');
 text.textContent = author;
 text.setAttribute("font-size", authorFontSize);

@@ -1,0 +1,15 @@
+---
+title: தியாக பூமி
+lang: ta
+author:
+  - கல்கி
+cover-image: cover.png
+
+authors: கல்கி
+titleFontSize: 300
+authorsFontSize: 175
+filename: thyaga_bhoomi
+source: source.md
+sourceFormat: markdown+yaml_metadata_block
+contentSource: http://www.projectmadurai.org/pm_etexts/utf8/pmuni0376.html
+---

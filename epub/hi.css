@@ -4,4 +4,7 @@
   font-weight: 400;
   src: url('Lohit-Devanagari.ttf');
 }
-body { font-family: 'Lohit Devanagari'; }
+body {
+    text-rendering: optimizeLegibility;
+    font-family: 'Lohit Devanagari';
+}
