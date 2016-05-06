@@ -33,8 +33,16 @@ def generateHTML(metadata)
   `pandoc #{general_options(metadata)} --css=#{full_path("../../html/base.css")} --css=#{html_css(metadata)} --from #{metadata['sourceFormat']} --to html5 --section-divs #{metadata['source']} --self-contained --output #{metadata['filename']}.html`
 end
 
+def general_pdf_options()
+  "--variable=documentclass:book"
+end
+
+def generate_kindlePDF(metadata)
+  `pandoc #{general_options(metadata)} #{general_pdf_options()} --variable=geometry:margin=2mm,paperwidth=85mm,paperheight=114mm --variable=fontsize:6pt --template=#{full_path("../../template.tex")} --from #{metadata['sourceFormat']} --to pdf -t latex --latex-engine=xelatex #{metadata['source']} --output #{metadata['filename']}_kindle.pdf`
+end
+
 def generatePDF(metadata)
-  `electron-pdf #{metadata['filename']}.html #{metadata['filename']}.pdf`
+  `pandoc #{general_options(metadata)} #{general_pdf_options()} --variable=geometry:margin=0.5in --variable=papersize:a4 --variable=fontsize:8pt --template=#{full_path("../../template.tex")} --from #{metadata['sourceFormat']} --to pdf -t latex --latex-engine=xelatex #{metadata['source']} --output #{metadata['filename']}.pdf`
 end
 
 def generateMOBI(metadata)
@@ -56,14 +64,16 @@ def generate(dir)
   generateEPUB(metadata)
   generateHTML(metadata)
   generatePDF(metadata)
+  generate_kindlePDF(metadata)
   generateMOBI(metadata)
 end
 
 
 current_dir = File.expand_path(File.dirname(__FILE__))
 books_dir = File.join(current_dir, 'books')
+process_only = ARGV[0]
 Dir.entries(books_dir).each do |file|
-  if File.directory?(File.join(books_dir, file)) && !(file == "." || file == "..")
+  if File.directory?(File.join(books_dir, file)) && !(file == "." || file == "..") && !(process_only && process_only != file)
     generate(File.join(books_dir, file))
   end
 end
