@@ -1,0 +1,42 @@
+---
+title: Indian Classic Literatures
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card-wrapper">
+        <div class="card-columns">
+          <% data.all.names.each do |name| %>
+              <div class="card">
+                <%= image_tag name + '.svg', :class => 'card-img-top'%>
+                <div class="card-img-overlay">
+                  <h4 class="card-title"><%= data[name].title %></h4>
+                  <p class="card-text"><%= data[name].authors %></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <a href="<%= 'books/' + name + '/' + name + '.html' %>" class="btn btn-primary">Read</a>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Book
+                      </button>
+                      <div class="dropdown-menu">
+                        <a rel="nofollow" class="dropdown-item" href="<%= data[name].amazonin %>">Amazon IN</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="<%= 'books/' + name + '.epub' %>" class="card-link">EPUB</a>
+                    <a href="<%= 'books/' + name + '.mobi' %>" class="card-link">MOBI</a>
+                    <a href="<%= 'books/' + name + '.pdf' %>" class="card-link">PDF</a>
+                    <a href="<%= 'books/' + name + '_kindle.pdf' %>" class="card-link">μ PDF</a>
+                  </li>
+                </ul>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

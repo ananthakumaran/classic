@@ -6,4 +6,8 @@ books/*/*.mobi
 books/*/*.png
 books/*/*.svg
 node_modules/
+site/source/books
+site/data
+site/source/images
+!site/data/all.yaml
 

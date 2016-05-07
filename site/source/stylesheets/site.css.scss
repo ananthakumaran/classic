@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+$gray-dark:                 #1E1E20 !default;
+$gray:                      #2A2C2B !default;
+$gray-light:                #374140 !default;
+$gray-lighter:              #eceeef !default;
+$gray-lightest:             #f7f7f9 !default;
+
+$red: #E74C3C;
+$light-blue: #2980B9;
+$blue: #3498DB;
+$dark-blue: #2C3E50;
+$white: #ECF0F1;
+
+$brand-primary:             $blue !default;
+$brand-success:             #5cb85c !default;
+$brand-info:                #5bc0de !default;
+$brand-warning:             #f0ad4e !default;
+$brand-danger:              #d9534f !default;
+
+$card-spacer-x:            1.25rem !default;
+
+
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+$font-family-sans-serif:     "Lato", Helvetica, Arial, sans-serif !default;
+$font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:           $font-family-sans-serif !default;
+
+@import "../../bower_components/bootstrap/scss/bootstrap-flex.scss";
+
+body .container {
+    margin-top: 25px;
+}
+
+.card-wrapper {
+    position: relative;
+}
+
+.card {
+    max-width: 15rem;
+}
+
+.card-link {
+    font-size: 0.9rem;
+    + .card-link {
+        margin-left: 0.35rem;
+    }
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-img-overlay {
+    text-align: center;
+
+    .card-title {
+        font-size: 2rem;
+        margin: 2rem 0 4rem;
+    }
+}
+
+body {
+    background: $white;
+}
+
+.navbar {
+    background: $red;
+}
+
+@include media-breakpoint-up(sm) {
+    .card-columns {
+        column-count: 4;
+        column-gap: 1rem;
+    }
+}

@@ -21,6 +21,9 @@ var svg = pattern.svg();
 svg.setAttribute('xmlns','http://www.w3.org/2000/svg');
 var doc = svg.ownerDocument;
 
+var serializeDocument = require("jsdom").serializeDocument;
+fs.writeFileSync(output + '_plain.svg', serializeDocument(svg), 'utf-8');
+
 var text = doc.createElementNS("http://www.w3.org/2000/svg", 'text');
 text.setAttribute("fill", '#333');
 text.textContent = title;
@@ -40,7 +43,6 @@ text.setAttribute("y", (height / 6) * 5);
 text.style.textAnchor = 'middle';
 svg.appendChild(text);
 
-var serializeDocument = require("jsdom").serializeDocument;
-fs.writeFileSync(output, serializeDocument(svg), 'utf-8');
+fs.writeFileSync(output + '.svg', serializeDocument(svg), 'utf-8');
 
 

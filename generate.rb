@@ -38,11 +38,11 @@ def general_pdf_options()
 end
 
 def generate_kindlePDF(metadata)
-  `pandoc #{general_options(metadata)} #{general_pdf_options()} --variable=geometry:margin=2mm,paperwidth=85mm,paperheight=114mm --variable=fontsize:6pt --template=#{full_path("../../template.tex")} --from #{metadata['sourceFormat']} --to pdf -t latex --latex-engine=xelatex #{metadata['source']} --output #{metadata['filename']}_kindle.pdf`
+  `pandoc #{general_options(metadata)} #{general_pdf_options()} --variable=geometry:margin=2mm,paperwidth=85mm,paperheight=114mm --variable=fontsize:8pt --template=#{full_path("../../template.tex")} --from #{metadata['sourceFormat']} --to pdf -t latex --latex-engine=xelatex #{metadata['source']} --output #{metadata['filename']}_kindle.pdf`
 end
 
 def generatePDF(metadata)
-  `pandoc #{general_options(metadata)} #{general_pdf_options()} --variable=geometry:margin=0.5in --variable=papersize:a4 --variable=fontsize:8pt --template=#{full_path("../../template.tex")} --from #{metadata['sourceFormat']} --to pdf -t latex --latex-engine=xelatex #{metadata['source']} --output #{metadata['filename']}.pdf`
+  `pandoc #{general_options(metadata)} #{general_pdf_options()} --variable=geometry:margin=0.5in,paperwidth=5.5in,paperheight=8.5in --variable=fontsize:10pt --template=#{full_path("../../template.tex")} --from #{metadata['sourceFormat']} --to pdf -t latex --latex-engine=xelatex #{metadata['source']} --output #{metadata['filename']}.pdf`
 end
 
 def generateMOBI(metadata)
@@ -51,7 +51,7 @@ end
 
 def generate_cover(metadata)
   cover_path = File.join(File.expand_path(File.dirname(__FILE__)), '../../cover.js')
-  `node #{cover_path} '#{metadata['title']}' '#{metadata['titleFontSize']}' '#{metadata['authors']}' '#{metadata['authorsFontSize']}' cover.svg`
+  `node #{cover_path} '#{metadata['title']}' '#{metadata['titleFontSize']}' '#{metadata['authors']}' '#{metadata['authorsFontSize']}' cover`
   `rm cover.png`
   `node ../../node_modules/svg2png/bin/svg2png-cli.js cover.svg`
 end
