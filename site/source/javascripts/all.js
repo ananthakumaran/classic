@@ -1,1 +1,2 @@
-// This is where it all goes :)
+window.jQuery = require("../../bower_components/jquery/dist/jquery.js");
+require("../../bower_components/bootstrap/dist/js/umd/dropdown.js");

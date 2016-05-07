@@ -10,15 +10,12 @@
     <!-- Bootstrap CSS -->
     <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :all %>
   </head>
   <body class="<%= page_classes %>">
     <nav class="navbar navbar-dark">
       <a class="navbar-brand" href="/">Indian Classic Literature</a>
     </nav>
     <%= yield %>
-    <!-- jQuery first, then Bootstrap JS. -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <%= javascript_include_tag :all %>
   </body>
 </html>

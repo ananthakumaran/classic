@@ -9,5 +9,6 @@ node_modules/
 site/source/books
 site/data
 site/source/images
+site/.tmp
 !site/data/all.yaml
 
