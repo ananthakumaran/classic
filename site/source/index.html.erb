@@ -17,14 +17,16 @@ title: Indian Classic Literature
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">
                     <a href="<%= 'books/' + name + '.html' %>" class="btn btn-primary">Read</a>
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Book
-                      </button>
-                      <div class="dropdown-menu">
-                        <a rel="nofollow" class="dropdown-item" href="<%= data[name].amazonin %>">Amazon IN</a>
+                    <% if data[name].amazonin %>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Book
+                        </button>
+                        <div class="dropdown-menu">
+                          <a rel="nofollow" class="dropdown-item" href="<%= data[name].amazonin %>">Amazon IN</a>
+                        </div>
                       </div>
-                    </div>
+                    <% end %>
                   </li>
                   <li class="list-group-item">
                     <a href="<%= 'books/' + name + '.epub' %>" class="card-link">EPUB</a>

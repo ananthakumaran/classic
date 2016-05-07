@@ -1,0 +1,14 @@
+---
+title: பொய்மான் கரடு
+lang: ta
+author:
+  - கல்கி
+cover-image: cover.png
+
+authors: கல்கி
+titleFontSize: 200
+authorsFontSize: 175
+filename: poiman_karadu
+source: source.md
+sourceFormat: markdown+yaml_metadata_block+hard_line_breaks
+---
