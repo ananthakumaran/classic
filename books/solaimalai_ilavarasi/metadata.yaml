@@ -1,0 +1,15 @@
+---
+title: சோலைமலை இளவரசி
+lang: ta
+author:
+  - கல்கி
+cover-image: cover.png
+
+authors: கல்கி
+titleFontSize: 150
+authorsFontSize: 175
+filename: solaimalai_ilavarasi
+source: source.md
+generateTOC: true
+sourceFormat: markdown+yaml_metadata_block+hard_line_breaks
+---
