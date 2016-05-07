@@ -1,0 +1,16 @@
+---
+title: பொன்னியின் செல்வன்
+lang: ta
+author:
+  - கல்கி
+cover-image: cover.png
+
+authors: கல்கி
+titleFontSize: 150
+authorsFontSize: 175
+filename: ponniyin_selvan
+source: source.md
+generateTOC: true
+sourceFormat: markdown+yaml_metadata_block+hard_line_breaks
+amazonin: http://www.amazon.in/gp/product/8179506363/ref=as_li_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8179506363&linkCode=as2&tag=icll-21
+---

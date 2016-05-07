@@ -30,7 +30,7 @@ def generateEPUB(metadata)
 end
 
 def generateHTML(metadata)
-  `pandoc #{general_options(metadata)} --css=#{full_path("../../html/base.css")} --css=#{html_css(metadata)} --from #{metadata['sourceFormat']} --to html5 --section-divs #{metadata['source']} --self-contained --output #{metadata['filename']}.html`
+  `pandoc #{general_options(metadata)} #{metadata['generateTOC'] && '--toc'} --css=#{full_path("../../html/base.css")} --css=#{html_css(metadata)} --from #{metadata['sourceFormat']} --to html5 --section-divs #{metadata['source']} --self-contained --output #{metadata['filename']}.html`
 end
 
 def general_pdf_options()

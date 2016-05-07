@@ -21,6 +21,15 @@ p {
     text-align: justify;
 }
 
+a {
+    text-decoration: none;
+    color: #E74C3C;
+}
+
+ul, li {
+    list-style: none;
+}
+
 
 @media print {
     header {

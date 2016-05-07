@@ -10,6 +10,7 @@ titleFontSize: 300
 authorsFontSize: 175
 filename: thyaga_bhoomi
 source: source.md
+generateTOC: true
 sourceFormat: markdown+yaml_metadata_block
 contentSource: http://www.projectmadurai.org/pm_etexts/utf8/pmuni0376.html
 amazonin: http://www.amazon.in/gp/product/B00HWWOZFK/ref=as_li_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=B00HWWOZFK&linkCode=as2&tag=icll-21
