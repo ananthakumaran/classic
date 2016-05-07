@@ -198,11 +198,13 @@ $if(dir)$
   \newenvironment{LTR}{\beginL}{\endL}
 \fi
 $endif$
+$if(verbatim-font)$
 \usepackage{verbatim}
 \makeatletter
 \newcommand{\verbatimfont}[1]{\def\verbatim@font{#1}}%
 \makeatother
-\verbatimfont{menlo}
+\verbatimfont{$verbatim-font$}
+$endif$
 $for(header-includes)$
 $header-includes$
 $endfor$

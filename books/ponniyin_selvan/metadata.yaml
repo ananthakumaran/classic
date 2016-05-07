@@ -8,6 +8,7 @@ cover-image: cover.png
 authors: கல்கி
 titleFontSize: 150
 authorsFontSize: 175
+verbatim-font: Lohit Tamil
 filename: ponniyin_selvan
 source: source.md
 generateTOC: true
