@@ -16,7 +16,7 @@ def html_css(metadata)
 end
 
 def font(metadata)
-  fonts = {ta: 'Lohit-Tamil.otf', hi: 'Lohit-Devanagari.otf'}
+  fonts = {ta: 'Lohit-Tamil.ttf', hi: 'Lohit-Devanagari.ttf'}
   lang = metadata['lang']
   full_path(File.join('../../fonts', fonts[lang.to_sym]))
 end
@@ -46,7 +46,9 @@ def generatePDF(metadata)
 end
 
 def generateMOBI(metadata)
-  `kindlegen #{metadata['filename']}.epub -verbose -c1 -o #{metadata['filename']}.mobi`
+  `pandoc #{general_options(metadata)} --epub-cover-image=#{full_path('cover.png')} --from #{metadata['sourceFormat']} --to epub #{metadata['source']} --output #{metadata['filename']}.kindle.epub`
+  `kindlegen #{metadata['filename']}.kindle.epub -verbose -c1 -o #{metadata['filename']}.mobi`
+  `rm #{metadata['filename']}.kindle.epub`
 end
 
 def generate_cover(metadata)
