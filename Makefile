@@ -7,3 +7,6 @@ regenerate:
 	cd site/build && git diff
 	cd site/build && git add .
 	cd site/build && git commit -m "update"
+
+deploy:
+	cd site/build && git push origin master

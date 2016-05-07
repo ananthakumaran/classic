@@ -41,14 +41,20 @@ body .container {
 }
 
 .card {
-    max-width: 15rem;
+    max-width: 12.5rem;
+    float: left;
+    margin-left: 1rem;
 }
 
 .card-link {
     font-size: 0.9rem;
     + .card-link {
-        margin-left: 0.35rem;
+        margin-left: 0.25rem;
     }
+}
+
+.list-group-item {
+    padding: 0.75rem 1rem;
 }
 
 .card-img-top {
@@ -71,11 +77,4 @@ body {
 
 .navbar {
     background: $red;
-}
-
-@include media-breakpoint-up(sm) {
-    .card-columns {
-        column-count: 4;
-        column-gap: 1rem;
-    }
 }
