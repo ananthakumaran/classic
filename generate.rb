@@ -47,7 +47,7 @@ end
 
 def generateMOBI(metadata)
   `pandoc #{general_options(metadata)} --epub-cover-image=#{full_path('cover.png')} --from #{metadata['sourceFormat']} --to epub #{metadata['source']} --output #{metadata['filename']}.kindle.epub`
-  `kindlegen #{metadata['filename']}.kindle.epub -verbose -c1 -o #{metadata['filename']}.mobi`
+  `kindlegen #{metadata['filename']}.kindle.epub -verbose -dont_append_source -c1 -o #{metadata['filename']}.mobi`
   `rm #{metadata['filename']}.kindle.epub`
 end
 
