@@ -11,4 +11,4 @@ site/data
 site/source/images
 site/.tmp
 !site/data/all.yaml
-
+scanned
