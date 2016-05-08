@@ -21,6 +21,14 @@ def font(metadata)
   full_path(File.join('../../fonts', fonts[lang.to_sym]))
 end
 
+def kindle_font_size(metadata)
+  {ta: '8pt', hi: '10pt'}[metadata['lang']]
+end
+
+def font_size(metadata)
+  {ta: '10pt', hi: '12pt'}[metadata['lang']]
+end
+
 def general_options(metadata)
   "metadata.yaml --verbose"
 end
@@ -38,11 +46,11 @@ def general_pdf_options()
 end
 
 def generate_kindlePDF(metadata)
-  `pandoc #{general_options(metadata)} #{general_pdf_options()} --variable=geometry:margin=2mm,paperwidth=85mm,paperheight=114mm --variable=fontsize:8pt --template=#{full_path("../../template.tex")} --from #{metadata['sourceFormat']} --to pdf -t latex --latex-engine=xelatex #{metadata['source']} --output #{metadata['filename']}_kindle.pdf`
+  `pandoc #{general_options(metadata)} #{general_pdf_options()} --variable=geometry:margin=2mm,paperwidth=85mm,paperheight=114mm --variable=fontsize:#{kindle_font_size(metadata)} --template=#{full_path("../../template.tex")} --from #{metadata['sourceFormat']} --to pdf -t latex --latex-engine=xelatex #{metadata['source']} --output #{metadata['filename']}_kindle.pdf`
 end
 
 def generatePDF(metadata)
-  `pandoc #{general_options(metadata)} #{general_pdf_options()} --variable=geometry:margin=0.5in,paperwidth=5.5in,paperheight=8.5in --variable=fontsize:10pt --template=#{full_path("../../template.tex")} --from #{metadata['sourceFormat']} --to pdf -t latex --latex-engine=xelatex #{metadata['source']} --output #{metadata['filename']}.pdf`
+  `pandoc #{general_options(metadata)} #{general_pdf_options()} --variable=geometry:margin=0.5in,paperwidth=5.5in,paperheight=8.5in --variable=fontsize:#{font_size(metadata)} --template=#{full_path("../../template.tex")} --from #{metadata['sourceFormat']} --to pdf -t latex --latex-engine=xelatex #{metadata['source']} --output #{metadata['filename']}.pdf`
 end
 
 def generateMOBI(metadata)

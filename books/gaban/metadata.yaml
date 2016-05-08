@@ -1,5 +1,5 @@
 ---
-title: कफ़न
+title: गबन
 lang: hi
 author:
   - प्रेमचंद
@@ -9,8 +9,9 @@ cover-image: cover.png
 authors: प्रेमचंद
 titleFontSize: 500
 authorsFontSize: 175
-filename: kafan
+filename: gaban
 source: source.md
+generateTOC: true
 sourceFormat: markdown+yaml_metadata_block+hard_line_breaks
-amazonin: http://www.amazon.in/gp/product/8181332970/ref=as_li_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8181332970&linkCode=as2&tag=icll-21
+amazonin: http://www.amazon.in/gp/product/B005N1K8WQ/ref=as_li_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=B005N1K8WQ&linkCode=as2&tag=icll-21
 ---
