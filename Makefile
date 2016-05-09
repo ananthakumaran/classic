@@ -5,10 +5,10 @@ build:
 regenerate:
 	cd site/build && bundle exec middleman build
 	cd site/build && git diff
-	cd site/build && git add .
-	cd site/build && git commit -m "update"
 
 deploy:
+	cd site/build && git add .
+	cd site/build && git commit -m "update"
 	cd site/build && git push --force origin master
 
 reset:
