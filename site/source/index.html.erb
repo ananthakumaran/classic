@@ -29,14 +29,14 @@ description: Free ebooks in Hindi and Tamil
                 <% end %>
               </li>
               <li class="list-group-item">
-                <a href="<%= 'books/' + name + '.epub' %>" class="card-link">EPUB</a>
-                <a href="<%= 'books/' + name + '.mobi' %>" class="card-link">MOBI</a>
-                    <a href="<%= 'books/' + name + '.pdf' %>" class="card-link">PDF</a>
-                    <a href="<%= 'books/' + name + '_kindle.pdf' %>" class="card-link">μ PDF</a>
-                  </li>
-                </ul>
-              </div>
-          <% end %>
+                <a data-toggle="tooltip" data-placement="top" title="For Mac, PC and e-readers" href="<%= 'books/' + name + '.epub' %>" class="card-link">EPUB</a>
+                <a data-toggle="tooltip" data-placement="top" title="For Kindle and e-readers" href="<%= 'books/' + name + '.mobi' %>" class="card-link">MOBI</a>
+                <a data-toggle="tooltip" data-placement="top" title="For Mac and PC" href="<%= 'books/' + name + '.pdf' %>" class="card-link">PDF</a>
+                <a data-toggle="tooltip" data-placement="top" title="For Kindle and e-readers" href="<%= 'books/' + name + '_kindle.pdf' %>" class="card-link">μ PDF</a>
+              </li>
+            </ul>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
