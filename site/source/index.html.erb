@@ -8,7 +8,7 @@ description: Free ebooks in Hindi and Tamil
     <div class="col-md-12">
       <div class="card-wrapper">
         <% data.all.names.each do |name| %>
-          <div class="card">
+          <div lang="<%= data[name].lang %>" class="card">
             <%= image_tag name + '.svg', :class => 'card-img-top'%>
             <div class="card-img-overlay">
               <h4 class="card-title"><%= data[name].title %></h4>
