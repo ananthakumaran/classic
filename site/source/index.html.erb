@@ -9,7 +9,9 @@ description: Free ebooks in Hindi and Tamil
       <div class="card-wrapper">
         <% data.all.names.each do |name| %>
           <div lang="<%= data[name].lang %>" class="card">
-            <%= image_tag name + '.svg', :class => 'card-img-top'%>
+            <div class="card-img-top" data-title="<%= data[name].title %>">
+              <svg width="100%" height="100%" viewBox="0 0 1563 2500"></svg>
+            </div>
             <div class="card-img-overlay">
               <h4 class="card-title"><%= data[name].title %></h4>
               <p class="card-text"><%= data[name].authors %></p>

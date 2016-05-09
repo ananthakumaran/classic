@@ -8,7 +8,7 @@ module.exports = {
   },
 
   resolve: {
-    modulesDirectories: [path.join(__dirname, 'bower_components'), 'node_modules'],
+    modulesDirectories: ['bower_components', 'node_modules', '../node_modules'],
     extensions: ["", ".webpack.js", ".web.js", ".ts", ".js", ".json"],
     root: [path.join(__dirname, 'source/javascripts')]
   },
