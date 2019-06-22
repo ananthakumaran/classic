@@ -9,7 +9,7 @@
   "author": "Anantha Kumaran <ananthakumaran@gmail.com>",
   "dependencies": {
     "jsdom": "7.0.2",
-    "svg2png": "^3.0.0",
+    "svg2png": "^4.0.0",
     "trianglify": "0.4.0"
   }
 }
