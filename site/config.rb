@@ -45,3 +45,5 @@ activate :external_pipeline,
          command: build? ? './node_modules/webpack/bin/webpack.js --bail' : './node_modules/webpack/bin/webpack.js --watch',
          source: ".tmp/dist",
          latency: 1
+
+set :build_dir, '../docs'

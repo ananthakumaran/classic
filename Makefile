@@ -3,8 +3,7 @@ build:
 	./copy.rb
 
 regenerate:
-	cd site/build && bundle exec middleman build
-	cd site/build && git diff
+	cd site && bundle exec middleman build
 
 deploy:
 	cd site/build && git add .
